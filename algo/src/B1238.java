@@ -50,9 +50,6 @@ public class B1238 {
 			go(visited, i, i, 0);
 		}
 		
-		7 17 19 22 
-		16
-		
 		System.out.println(Arrays.toString(result));
 		
 		int max = 0;
