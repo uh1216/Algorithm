@@ -3,6 +3,7 @@ package ws._0819;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
@@ -54,6 +55,7 @@ public class B17135 {
 	
 	private static int play(boolean[] archer, int N, int M, int D, LinkedList<int[]> map) {
 		int count = 0;
+
 		int[] row = {0, -1, 0};
 		int[] col = {-1, 0, 1};
 		for (int i = 0; i < N; i++) {
@@ -75,9 +77,10 @@ public class B17135 {
 					if (map.get(e[0])[e[1]] == 1) {
 						count += 1;
 						map.get(e[0])[e[1]] = -1;
+						break;
 					}
 					else if (map.get(e[0])[e[1]] == -1) {
-						continue;
+						break;
 					}
 					else {
 						for (int k = 0; k < 3; k++) {
@@ -92,7 +95,6 @@ public class B17135 {
 					}
 				}
 			}
-			
 			map.remove(map.size()-1);
 			map.offerFirst(new int[M]);
 			
@@ -105,5 +107,6 @@ public class B17135 {
 		return count;
 	}
 }
+
 
 
