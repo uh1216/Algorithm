@@ -57,15 +57,12 @@ public class B3055 {
 		boolean[][] visited = new boolean[map.length][map[0].length];
 		visited[go[0]][go[1]] = true;
 
-		int db = 1;
-		int da = 0;
 		while (!queue.isEmpty()) {
-			
+			int size = queue.size();
 			waterDown(map);
 			
-			while (!queue.isEmpty() && db != 0) {
+			while (--size >= 0) {
 				go = queue.poll();
-				db--;
 				
 				if (go[0] == bR && go[1] == bC) {
 					result = result > count ? result : count;
@@ -80,13 +77,9 @@ public class B3055 {
 							(map[ngoR][ngoC] == '.' || map[ngoR][ngoC] == 'D') && !visited[ngoR][ngoC]) {
 						visited[ngoR][ngoC] = true;
 						queue.add(new int [] {ngoR, ngoC});
-						da++;
 					}
 				}
 			}
-			
-			db = da;
-			da = 0;
 			count++;
 		}
 		
