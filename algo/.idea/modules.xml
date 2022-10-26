@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/algo.iml" filepath="$PROJECT_DIR$/algo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bfs/bfs.iml" filepath="$PROJECT_DIR$/../bfs/bfs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../combination/combination.iml" filepath="$PROJECT_DIR$/../combination/combination.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dp/dp.iml" filepath="$PROJECT_DIR$/../dp/dp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hw/hw.iml" filepath="$PROJECT_DIR$/../hw/hw.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../implements/implements.iml" filepath="$PROJECT_DIR$/../implements/implements.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../study/study.iml" filepath="$PROJECT_DIR$/../study/study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../subset/subset.iml" filepath="$PROJECT_DIR$/../subset/subset.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ws/ws.iml" filepath="$PROJECT_DIR$/../ws/ws.iml" />
+    </modules>
+  </component>
+</project>
