@@ -35,6 +35,7 @@ public class B16234 {
         L = Integer.parseInt(st.nextToken());
         R = Integer.parseInt(st.nextToken());
 
+        visited = new boolean[N][N];
         int[][] map = new int[N][N];
         for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
@@ -46,8 +47,6 @@ public class B16234 {
         int result = 0;
         while (true) {
             isOpen = false;
-
-            visited = new boolean[N][N];
 
             for (int i = 0; i < N; i++) {
                 for (int j = 0; j < N; j++) {
