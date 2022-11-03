@@ -78,15 +78,15 @@ public class B15685 {
     }
 
     private static void dragonCurve(P p, int d, int g) {
-        int[] path = dragon[g];
+        int[] path = dragon[g].clone();
 
         visited[p.r][p.c] = true;
 
         for (int i = 0; i < path.length; i++) {
-            path[i] = (path[i] + d) % 4;
+            int pa = (path[i] + d) % 4;
 
-            int nr = p.r + rows[path[i]];
-            int nc = p.c + cols[path[i]];
+            int nr = p.r + rows[pa];
+            int nc = p.c + cols[pa];
 
             visited[nr][nc] = true;
 
