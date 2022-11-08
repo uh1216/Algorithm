@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/implements/implements.iml" filepath="$PROJECT_DIR$/implements/implements.iml" />
       <module fileurl="file://$PROJECT_DIR$/study/study.iml" filepath="$PROJECT_DIR$/study/study.iml" />
       <module fileurl="file://$PROJECT_DIR$/subset/subset.iml" filepath="$PROJECT_DIR$/subset/subset.iml" />
+      <module fileurl="file://$PROJECT_DIR$/twoPointer/twoPointer.iml" filepath="$PROJECT_DIR$/twoPointer/twoPointer.iml" />
       <module fileurl="file://$PROJECT_DIR$/ws/ws.iml" filepath="$PROJECT_DIR$/ws/ws.iml" />
     </modules>
   </component>
