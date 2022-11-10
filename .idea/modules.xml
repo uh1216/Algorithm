@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/bfs/bfs.iml" filepath="$PROJECT_DIR$/bfs/bfs.iml" />
       <module fileurl="file://$PROJECT_DIR$/combination/combination.iml" filepath="$PROJECT_DIR$/combination/combination.iml" />
       <module fileurl="file://$PROJECT_DIR$/dp/dp.iml" filepath="$PROJECT_DIR$/dp/dp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/greedy/greedy.iml" filepath="$PROJECT_DIR$/greedy/greedy.iml" />
       <module fileurl="file://$PROJECT_DIR$/hw/hw.iml" filepath="$PROJECT_DIR$/hw/hw.iml" />
       <module fileurl="file://$PROJECT_DIR$/implements/implements.iml" filepath="$PROJECT_DIR$/implements/implements.iml" />
       <module fileurl="file://$PROJECT_DIR$/study/study.iml" filepath="$PROJECT_DIR$/study/study.iml" />
