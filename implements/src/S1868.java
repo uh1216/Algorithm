@@ -70,7 +70,7 @@ public class S1868 {
             for (int i = 0; i < zero.size(); i++) {
                 P z = zero.get(i);
 
-                if (map[z.r][z.c] != 1) {
+                if (map[z.r][z.c] != '1') {
                     result++;
                     bfs(map, zero.get(i));
                 }
@@ -86,11 +86,6 @@ public class S1868 {
         queue.offer(p);
 
         while (!queue.isEmpty()) {
-            for (int i = 0; i < N; i++) {
-                System.out.println(Arrays.toString(map[i]));
-            }
-            System.out.println();
-
             P now = queue.poll();
 
             for (int i = 0; i < 8; i++) {
@@ -102,9 +97,9 @@ public class S1868 {
                         queue.offer(new P(nr, nc));
                     }
                     else {
-                        map[nr][nc] = 1;
                         left--;
                     }
+                    map[nr][nc] = '1';
                 }
             }
         }
