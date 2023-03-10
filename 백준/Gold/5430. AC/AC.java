@@ -3,14 +3,15 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.Arrays;
 import java.util.LinkedList;
+import java.util.StringTokenizer;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringTokenizer st;
 
         int T = Integer.parseInt(br.readLine());
 
@@ -18,15 +19,17 @@ public class Main {
             String op = br.readLine();
 
             int N = Integer.parseInt(br.readLine());
-            String arr = br.readLine();
+            st = new StringTokenizer(br.readLine(), "[],");
 
             if (N == 0 && op.contains("D")) {
                 bw.write("error" + "\n");
                 continue;
             }
 
-            String[] split = arr.substring(1, arr.length() - 1).split(",");
-            LinkedList<String> list = new LinkedList<>(Arrays.asList(split));
+            LinkedList<String> list = new LinkedList<>();
+            for (int i = 0; i < N; i++) {
+                list.add(st.nextToken());
+            }
 
             bw.write(exec(op, list) + "\n");
         }
@@ -50,23 +53,22 @@ public class Main {
                 }
             }
         }
-        StringBuilder sb = new StringBuilder();
-        sb.append("[");
+        StringBuilder sb = new StringBuilder("[");
 
         if (isReverse) {
-            for (int i = list.size() - 1; i >= 0; i--) {
-                sb.append(list.get(i)).append(",");
+            while (!list.isEmpty()) {
+                sb.append(list.removeLast()).append(",");
             }
         } else {
-            for (String s : list) {
-                sb.append(s).append(",");
+            while (!list.isEmpty()) {
+                sb.append(list.removeFirst()).append(",");
             }
         }
         if (sb.length() > 1) {
-            sb.deleteCharAt(sb.length() - 1);
+            sb.setCharAt(sb.length() - 1, ']');
+        } else {
+            sb.append("]");
         }
-
-        sb.append("]");
 
         return sb.toString();
     }
