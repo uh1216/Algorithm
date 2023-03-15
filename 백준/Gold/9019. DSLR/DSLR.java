@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayDeque;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Queue;
 import java.util.StringTokenizer;
@@ -30,12 +31,11 @@ public class Main {
     }
 
     private static void bfs(int A, int B) throws IOException {
-        HashSet<Integer> visited = new HashSet<>();
-        visited.add(A);
         Queue<Integer> queue = new ArrayDeque<>();
         queue.add(A);
 
         int[] parent = new int[10000];
+        Arrays.fill(parent, -1);
         char[] oper = new char[10000];
 
         while (!queue.isEmpty()) {
@@ -52,8 +52,7 @@ public class Main {
 
             int D = (now * 2) % 10000;
 
-            if (!visited.contains(D)) {
-                visited.add(D);
+            if (parent[D] == -1) {
                 parent[D] = now;
                 oper[D] = 'D';
                 queue.add(D);
@@ -61,8 +60,7 @@ public class Main {
 
             int S = now == 0 ? 9999 : (now - 1);
 
-            if (!visited.contains(S)) {
-                visited.add(S);
+            if (parent[S] == -1) {
                 parent[S] = now;
                 oper[S] = 'S';
                 queue.add(S);
@@ -70,8 +68,7 @@ public class Main {
 
             int L = (now * 10) % 10000 + (now / 1000);
 
-            if (!visited.contains(L)) {
-                visited.add(L);
+            if (parent[L] == -1) {
                 parent[L] = now;
                 oper[L] = 'L';
                 queue.add(L);
@@ -79,8 +76,7 @@ public class Main {
 
             int R = (now / 10) + ((now % 10) * 1000);
 
-            if (!visited.contains(R)) {
-                visited.add(R);
+            if (parent[R] == -1) {
                 parent[R] = now;
                 oper[R] = 'R';
                 queue.add(R);
