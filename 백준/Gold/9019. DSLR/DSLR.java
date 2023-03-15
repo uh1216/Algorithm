@@ -5,7 +5,6 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayDeque;
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
@@ -42,12 +41,12 @@ public class Main {
             int now = queue.poll();
 
             if (now == B) {
-                StringBuilder sb = new StringBuilder();
+                String tem = "";
                 while (now != A) {
-                    sb.append(oper[now]);
+                    tem = oper[now] + tem;
                     now = parent[now];
                 }
-                bw.write(sb.reverse() + "\n");
+                bw.write(tem + "\n");
             }
 
             int D = (now * 2) % 10000;
