@@ -13,7 +13,6 @@ public class Main {
 
         int N = Integer.parseInt(br.readLine());
 
-        int[] people = new int[N];
         PriorityQueue<Integer> time = new PriorityQueue<>();
 
         st = new StringTokenizer(br.readLine());
@@ -21,11 +20,13 @@ public class Main {
             time.add(Integer.parseInt(st.nextToken()));
         }
 
-        people[0] = time.poll();
-        for (int i = 1; i < N; i++) {
-            people[i] = time.poll() + people[i - 1];
+        int sum = 0;
+        int sum2 = 0;
+        for (int i = 0; i < N; i++) {
+            sum2 += time.poll();
+            sum += sum2;
         }
 
-        System.out.println(Arrays.stream(people).sum());
+        System.out.println(sum);
     }
 }
