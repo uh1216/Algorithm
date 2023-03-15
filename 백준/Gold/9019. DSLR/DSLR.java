@@ -47,6 +47,7 @@ public class Main {
                     now = parent[now];
                 }
                 bw.write(tem + "\n");
+                return;
             }
 
             int D = (now * 2) % 10000;
